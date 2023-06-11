@@ -10,8 +10,8 @@ export const useFeed = () => {
   useEffect(() => {
     if (!username) return;
     fetchFeed([`https://vore.website/${username}`]).then((items) => {
-      // const flattened = items.flat();
-      const flattened = items.flat().filter(({ published }) => isToday(new Date(published)));
+      const flattened = items.flat();
+      //   const flattened = items.flat().filter(({ published }) => isToday(new Date(published)));
       if (JSON.stringify(flattened) === JSON.stringify(links)) return;
       setLinks(flattened);
     });
