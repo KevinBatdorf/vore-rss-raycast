@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "vore-rss",
   "title": "Vore RSS",
-  "description": "A simple RSS reader using vore.website",
+  "description": "View today's posts aggregated via vore.website",
   "icon": "command-icon.png",
   "author": "KevinBatdorf",
   "categories": [
@@ -14,16 +14,25 @@
       "name": "vore",
       "title": "View RSS Feed",
       "subtitle": "Vore",
-      "description": "View latest RSS feed from any vore.website user",
+      "description": "View todays RSS feed from vore.website",
       "mode": "view"
     },
     {
       "name": "refresh-feed",
       "title": "Refresh RSS Feed",
       "subtitle": "Vore",
-      "description": "Checks for new posts and optionally shows a notification or dot",
+      "description": "Checks for new posts and shows the count in the menubar",
       "mode": "menu-bar",
       "interval": "5m"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "username",
+      "title": "Vore Username",
+      "description": "The RSS feed to use",
+      "type": "textfield",
+      "required": true
     }
   ],
   "dependencies": {
